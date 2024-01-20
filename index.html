@@ -7,4 +7,28 @@
 <body>
     <h1>我这世界上最最可爱最最好看的女朋友😘👇</h1>
     <img src="/mmexport1705228431785.jpg" width="720" height="1280" />
+function lovetime() ｛
+window.setTimeout("lovetime()"，1000);
+var seconds = 1000
+var minutes = seconds * 60
+var hours = minutes * 60
+var days = hours * 24
+var years = days * 365
+var today = new Date()
+var todayYear = today .getFullYear()
+var todayMonth = today.getMonth()
+var todayDate = today.getDate()
+var todayHour = today.getHours()
+var todayMinute = today.getminutes()
+var todaySecond= today.getseconds()
+var t1 = Date.UTC(2024，1，1，19,53, 46)
+var t2 = Date.UTC(todayYear, todayMonth,todayDate，todayHour, todayMinute,todaySecond)
+var diff = t2 -t1
+var diffyears = Math.floor(diff / years)
+var diffDays = Math.floor((diff / days) - diffYears * 365)
+var diffHours = Math.floor((diff - (diffyears * 365 + diffays) * days) / hours)
+var diffMinutes = Math .floor((diff- (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes)
+var diffseconds = Math .floor((diff- (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes
+minutes)/ seconds)
+document,getElementById("lovetime").innerHTML = "我们已经在一起 " + diffears + "年" + diffDays + "天"diffHours +“小时”+ diffMinutes +“分钟”+ diffSeconds +"秒啦"
 </body>
