@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html>
-    <body background="image/mmexport1705228431785.jpg"
-style=" background-repeat:no-repeat ;
-background-size:100% 100%;
-background-attachment: fixed;"
->
-    <head>
-<meta charset="utf-8">
-<title>情人节快乐！！！❤️❤️❤️</title>
-</head>
-<body>
-    <h1>我这世界上最最可爱最最好看的女朋友😘👇</h1>
-</body>
+    <body
+        background="image/mmexport1705228431785.jpg"
+        style="background-repeat: no-repeat; background-size: 100%; background-attachment: fixed">
+        <head>
+            <meta charset="utf-8" />
+            <title>情人节快乐！！！❤️❤️❤️</title>
+        </head>
+        <body onload="showTime()">
+            <h1>我这世界上最最可爱最最好看的女朋友😘👇</h1>
+            <h2>suchas我已经来到这世上<br /><a id="yy"></a>年<a id="mm"></a>月<a id="dd"></a>日<a id="h"></a>时<a id="m"></a>分<a id="s"></a>秒</h2>
+        </body>
+        <script>
+            // start 2024年1月1日19:53:46
+            function showTime() {
+                var d = new Date();
+                var yy, mm, dd, h, m, s; // 分别对应：年，月，日，时，分，秒
+                yy = d.getFullYear() - 2024;
+                mm = d.getMonth();
+                dd = d.getDate() - 1;
+                h = d.getHours() - 19 < 0 ? d.getHours() + 5 : d.getHours() - 19;
+                m = d.getMinutes() - 53 < 0 ? d.getMinutes() + 7 : d.getMinutes() - 53;
+                s = d.getSeconds() - 46 < 0 ? d.getSeconds() + 14 : d.getSeconds() - 46;
+                document.getElementById("yy").innerHTML = `${yy}`;
+                document.getElementById("mm").innerHTML = `${mm}`;
+                document.getElementById("dd").innerHTML = `${dd}`;
+                document.getElementById("h").innerHTML = `${h < 10 ? "0" + String(h) : h}`;
+                document.getElementById("m").innerHTML = `${m < 10 ? "0" + String(m) : m}`;
+                document.getElementById("s").innerHTML = `${s < 10 ? "0" + String(s) : s}`;
+            }
+            setInterval("showTime();", 1000);
+        </script>
+    </body>
+</html>
